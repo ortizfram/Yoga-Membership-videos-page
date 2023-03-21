@@ -44,7 +44,7 @@ function Slider() {
 
   return (
     // container
-    <div className=" h-[20vh] w-[60vw] sm:max-w-[600px]  m-auto relative group shadow-2xl">
+    <div className="h-[20vh] w-[60vw] sm:max-w-[600px]  m-auto relative group shadow-2xl">
       <div
         // link imgs
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
