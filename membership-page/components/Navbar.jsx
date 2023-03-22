@@ -33,16 +33,16 @@ const Navbar = () => {
           style={{ scrollBehavior: "smooth" }}
         >
           <li>
-            <Link href="/" passHref>
+            <Link href="/#hero" passHref>
               Inicio
             </Link>
-            <Link href="/" passHref>
+            <Link href="/#about" passHref>
               Acerca
             </Link>
             <Link href="/" passHref>
               Talleres
             </Link>
-            <Link href="/" passHref>
+            <Link href="/#contact" passHref>
               Contacto
             </Link>
           </li>

@@ -1,3 +1,4 @@
+import Login from '@/components/Login'
 import Navbar from '@/components/Navbar'
 import Head from 'next/head'
 import Acerca from './Acerca'
@@ -15,6 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <Login />
         <Navbar />
         <Hero />
         <Acerca />

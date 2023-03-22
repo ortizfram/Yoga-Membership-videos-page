@@ -28,7 +28,8 @@ module.exports = {
     extend: {
       backgroundImage:{
         'hero-image':'url("https://images.pexels.com/photos/906097/pexels-photo-906097.jpeg?auto=compress&cs=tinysrgb&w=1600")',
-        'contact-image':'url("https://images.pexels.com/photos/539694/pexels-photo-539694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")'
+        'contact-image':'url("https://images.pexels.com/photos/539694/pexels-photo-539694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
+        'login-image':'url("../public/login-2.jpg")',
       }
     },
   },
