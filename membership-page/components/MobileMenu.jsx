@@ -17,7 +17,7 @@ const MobileMenu = ({ showMenu, hideMenu, active }) => {
       }
     >
       <li>
-        <CloseIcon onClick={hideMenu} className="cursor-pointer scale-150" />
+        <CloseIcon onClick={showMenu} className="cursor-pointer scale-150" />
       </li>
       <li>
         <Link onClick={handleLinkClick} href="/#hero" passHref>
