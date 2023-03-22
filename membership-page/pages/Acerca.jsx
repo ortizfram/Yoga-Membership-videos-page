@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Acerca = () => {
   return (
@@ -10,14 +11,16 @@ const Acerca = () => {
       </h1>
 
       {/* grid section --------------------------*/}
-      <div className="flex flex-col items-center text-center md:flex md:flex-row ">
+      <div className="flex flex-col items-center text-center md:flex md:flex-row">
         {/* me */}
         <div className="md:items-center p-2 md:mt-[-20px]">
-          <div className="w-full md:text-center">
-            <img
-              src="https://media.licdn.com/dms/image/C4D03AQFNTPDXEWK_7A/profile-displayphoto-shrink_200_200/0/1616874347477?e=1683763200&v=beta&t=lBcPfILTA1Iw2Ydns-W0VRGxHb6t8kHUMGTyGM2xtS0"
-              alt="..."
-              className="shadow-2xl rounded-full h-auto border-none md:w-auto md:max-w-none"
+          <div className="w-full md:text-center h-full">
+            <Image
+              width={300}
+              height={300}
+              src="/marcela-marzetti.jpg"
+              alt="marcela marzetti"
+              className="shadow-2xl rounded-full h-[100px] sm:h-[250px] sm:w-[350px] object-cover border-none"
             />
             <h3 className="mt-3 font-semibold italic md:pb-5">
               Marcela Marzetti
