@@ -2,7 +2,12 @@ import React from "react";
 import Link from "next/link";
 import CloseIcon from "@mui/icons-material/Close";
 
-const MobileMenu = ({ showMenu, active }) => {
+const MobileMenu = ({ showMenu, hideMenu, active }) => {
+  const handleLinkClick = () => {
+    showMenu();
+    hideMenu();
+  };
+
   return (
     <ul
       className={
@@ -15,22 +20,22 @@ const MobileMenu = ({ showMenu, active }) => {
         <CloseIcon onClick={showMenu} className="cursor-pointer scale-150" />
       </li>
       <li>
-        <Link href="/" passHref>
+        <Link onClick={handleLinkClick} href="/#hero" passHref>
           Inicio
         </Link>
       </li>
       <li>
-        <Link href="/" passHref>
+        <Link onClick={handleLinkClick} href="/#about" passHref>
           Acerca
         </Link>
       </li>
       <li>
-        <Link href="/" passHref>
+        <Link onClick={handleLinkClick} href="/" passHref>
           Talleres
         </Link>
       </li>
       <li>
-        <Link href="/" passHref>
+        <Link onClick={handleLinkClick} href="/#contact" passHref>
           Contacto
         </Link>
       </li>

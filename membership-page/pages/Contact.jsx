@@ -6,7 +6,10 @@ import EmailIcon from "@mui/icons-material/Email";
 const Contact = () => {
   return (
     //container
-    <div className="sm:flex sm:justify-center flex-col items-center bg-contact-image bg-cover bg-center bg-brightness-50 py-6 h-[50vh] mt-[310px] md:m-auto md:mt-[50px]">
+    <div
+      id="contact"
+      className="sm:flex sm:justify-center flex-col items-center bg-contact-image bg-cover bg-center bg-brightness-50 py-6 h-[50vh] mt-[310px] md:m-auto md:mt-[50px]"
+    >
       {/* section title */}
       <h1 className="p-4 text-2xl italic font-bold text-center text-white">
         Contacto.

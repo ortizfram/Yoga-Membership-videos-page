@@ -4,7 +4,10 @@ import Image from "next/image";
 const Acerca = () => {
   return (
     // container
-    <div className="w-full h-[75vh] md:h-[60vh] sm:h-[50-vh] xl:h-[40vh] m-auto p-6">
+    <div
+      id="about"
+      className="w-full h-[75vh] md:h-[60vh] sm:h-[50-vh] xl:h-[40vh] m-auto p-6"
+    >
       {/* section title */}
       <h1 className="p-4 text-2xl italic font-bold text-center text-blue-800/80">
         Acerca de.

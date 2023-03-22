@@ -28,7 +28,10 @@ const Navbar = () => {
           />
         </div>
 
-        <ul className="hidden md:flex gap-8 p-6 uppercase  bg-black/30 backdrop-blur-lg">
+        <ul
+          className="hidden md:flex gap-8 p-6 uppercase  bg-black/30 backdrop-blur-lg"
+          style={{ scrollBehavior: "smooth" }}
+        >
           <li>
             <Link href="/" passHref>
               Inicio
