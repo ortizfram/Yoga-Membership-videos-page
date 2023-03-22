@@ -28,7 +28,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="uppercase text-center text-white font-extrabold ">
+      <div className="uppercase text-center text-white font-extrabold">
         <h3 className="text-xl font-serif font-thin underline">
           Kundalini Marcela.
         </h3>
