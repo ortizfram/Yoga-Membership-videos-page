@@ -4,10 +4,7 @@ import Image from "next/image";
 const Acerca = () => {
   return (
     // container
-    <div
-      id="about"
-      className="w-full h-[75vh] md:h-[60vh] sm:h-[50-vh] xl:h-[40vh] m-auto p-6"
-    >
+    <div id="about" className="w-full h-auto m-auto p-6">
       {/* section title */}
       <h1 className="p-4 text-2xl italic font-bold text-center text-blue-800/80">
         Acerca de.
@@ -32,7 +29,7 @@ const Acerca = () => {
         </div>
 
         {/* content */}
-        <div className="p-6 flex-row md:flex md:text-start md:p-8">
+        <div className="flex-row md:flex md:text-start">
           <p>
             ¡Bienvenido/a a mi página web! <br /> Mi nombre es Marcela Marzetti
             y soy una persona como tú, transitando esta experiencia humana aquí
