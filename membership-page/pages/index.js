@@ -1,11 +1,13 @@
 import Login from '@/components/Login'
 import Navbar from '@/components/Navbar'
+import Clases from '@/components/Clases'
 import Head from 'next/head'
 import Acerca from './Acerca'
 import Contact from './Contact'
 import Hero from './Hero'
 // 
 import { useSession, getSession } from 'next-auth/react';
+
 
 
 
@@ -26,10 +28,11 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <main>
-            <Navbar />
+            <Clases />
+            {/* <Navbar />
             <Hero />
             <Acerca />
-            <Contact />
+            <Contact /> */}
           </main>
         </>
   )
