@@ -4,7 +4,7 @@ import Image from "next/image";
 const Acerca = () => {
   return (
     // container
-    <div className="w-full h-[50vh] p-6">
+    <div className="w-full h-[75vh] md:h-[60vh] sm:h-[50-vh] xl:h-[40vh] m-auto p-6">
       {/* section title */}
       <h1 className="p-4 text-2xl italic font-bold text-center text-blue-800/80">
         Acerca de.
@@ -20,7 +20,7 @@ const Acerca = () => {
               height={300}
               src="/marcela-marzetti.jpg"
               alt="marcela marzetti"
-              className="shadow-2xl rounded-full h-[100px] sm:h-[250px] sm:w-[350px] object-cover border-none"
+              className="shadow-2xl rounded-full w-[200px] h-[100px] sm:h-[250px] sm:w-[650px] md:w-[2100px] object-cover border-none"
             />
             <h3 className="mt-3 font-semibold italic md:pb-5">
               Marcela Marzetti
@@ -31,11 +31,25 @@ const Acerca = () => {
         {/* content */}
         <div className="p-6 flex-row md:flex md:text-start md:p-8">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
-            consequuntur iusto. Temporibus amet sapiente ea. Lorem ipsum dolor
-            sit amet, consectetur adipisicing elit. Consequatur cumque, enim eum
-            sint illo necessitatibus? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit.
+            ¡Bienvenido/a a mi página web! <br /> Mi nombre es Marcela Marzetti
+            y soy una persona como tú, transitando esta experiencia humana aquí
+            en la Tierra. Soy licenciada en administración de empresas y he
+            dedicado gran parte de mi vida a gestionar negocios. Sin embargo, mi
+            camino me llevó al yoga kundalini, una práctica que transformó mi
+            vida y me permitió conectar con mi propia sabiduría interna y mi
+            gurú interno. En estos tiempos de incertidumbre y cambios
+            constantes, el yoga kundalini es una herramienta poderosa para
+            gestionar nuestras energías y conectarnos con nuestro corazón y
+            nuestra alma. A través de esta práctica, podemos activar nuestra
+            magia interna y vivir en un estado de salud, felicidad, dicha, amor,
+            gratitud, alegría, abundancia, paz y prosperidad. Mi intención es
+            acompañarte en este camino de autodescubrimiento y ayudarte a
+            conectar con tu propio gurú interno, esa sabiduría interna que te
+            guía y te permite obtener tu auto-maestría. Juntos, podemos abrir la
+            puerta al campo ilimitado de infinitas posibilidades y concretar
+            todas tus intenciones para vivir en un estado de armonía. ¡Te invito
+            a explorar mi página web y descubrir cómo puedo ayudarte en este
+            camino de crecimiento personal!
           </p>
         </div>
       </div>
