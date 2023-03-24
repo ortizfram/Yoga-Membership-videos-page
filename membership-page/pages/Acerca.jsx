@@ -22,7 +22,7 @@ const Acerca = () => {
               alt="marcela marzetti"
               className="shadow-2xl rounded-full w-[200px] h-[100px] sm:h-[250px] sm:w-[650px] md:w-[2100px] object-cover border-none"
             />
-            <h3 className="mt-3 font-semibold italic md:pb-5 text-2xl">
+            <h3 className="mt-3 font-semibold italic md:pb-5 text-2xl  text-blue-800/50">
               Marcela Marzetti
             </h3>
           </div>

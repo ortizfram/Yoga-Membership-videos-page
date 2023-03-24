@@ -1,7 +1,6 @@
 import { SessionProvider } from "next-auth/react"
 import '@/styles/globals.scss'
 import React, { useState, useEffect } from 'react'
-import {Layout} from '../components'
 
 export default function App({
   Component,
@@ -9,9 +8,7 @@ export default function App({
 }) {
   return (
     <SessionProvider session={session}>
-      <Layout >
         <Component {...pageProps} />
-      </Layout>
     </SessionProvider>
   )
 }

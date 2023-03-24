@@ -1,6 +1,5 @@
 import Login from '@/components/Login'
 import Navbar from '@/components/Navbar'
-import Clases from '@/components/Clases'
 import Head from 'next/head'
 import Acerca from './Acerca'
 import Contact from './Contact'
@@ -27,12 +26,11 @@ export default function Home() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/favicon.ico" />
           </Head>
-          <main>
-            <Clases />
-            {/* <Navbar />
+          <main className='bg-white'>
+            <Navbar />
             <Hero />
             <Acerca />
-            <Contact /> */}
+            <Contact />
           </main>
         </>
   )
