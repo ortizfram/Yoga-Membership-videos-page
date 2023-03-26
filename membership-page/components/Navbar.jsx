@@ -12,12 +12,14 @@ const Navbar = () => {
 
   return (
     <div className="fixed w-full text-white flex justify-between p-4 items-center z-40">
-      {/* logo */}
-      <div className="text-2xl font-bold text-center uppercase border-2 p-2 shadow-xl bg-black/20 backdrop-blur-sm">
-        <h1>
-          K <span className="block text-4xl">M</span>
-        </h1>
-      </div>
+      <Link href="/">
+        {/* logo */}
+        <div className="cursor-pointer text-2xl font-bold text-center uppercase border-2 p-2 shadow-xl bg-black/20 backdrop-blur-sm">
+          <h1>
+            K <span className="block text-4xl">M</span>
+          </h1>
+        </div>
+      </Link>
 
       {/* nav */}
       <nav>
@@ -33,18 +35,10 @@ const Navbar = () => {
           style={{ scrollBehavior: "smooth" }}
         >
           <li>
-            <Link href="/#hero" passHref>
-              Inicio
-            </Link>
-            <Link href="/#about" passHref>
-              Acerca
-            </Link>
-            <Link href="/" passHref>
-              Talleres
-            </Link>
-            <Link href="/#contact" passHref>
-              Contacto
-            </Link>
+            <Link href="/">Inicio</Link>
+            <Link href="/#about">Acerca</Link>
+            <Link href="/blog">Clases</Link>
+            <Link href="/#contact">Contacto</Link>
           </li>
         </ul>
 

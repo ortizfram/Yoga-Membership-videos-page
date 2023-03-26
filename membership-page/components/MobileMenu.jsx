@@ -20,22 +20,22 @@ const MobileMenu = ({ showMenu, hideMenu, active }) => {
         <CloseIcon onClick={showMenu} className="cursor-pointer scale-150" />
       </li>
       <li>
-        <Link onClick={handleLinkClick} href="/#hero" passHref>
+        <Link onClick={handleLinkClick} href="/">
           Inicio
         </Link>
       </li>
       <li>
-        <Link onClick={handleLinkClick} href="/#about" passHref>
+        <Link onClick={handleLinkClick} href="/#about">
           Acerca
         </Link>
       </li>
       <li>
-        <Link onClick={handleLinkClick} href="/" passHref>
-          Talleres
+        <Link onClick={handleLinkClick} href="/blog">
+          Clases
         </Link>
       </li>
       <li>
-        <Link onClick={handleLinkClick} href="/#contact" passHref>
+        <Link onClick={handleLinkClick} href="/#contact">
           Contacto
         </Link>
       </li>
