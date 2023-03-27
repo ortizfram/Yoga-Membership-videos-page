@@ -1,6 +1,7 @@
 import MobileMenu from "@/components/MobileMenu";
 import Navbar from "@/components/Navbar";
 import { GraphQLClient, gql } from "graphql-request";
+import Image from "next/image";
 import sanitizeHtml from "sanitize-html";
 
 const hygraph = new GraphQLClient(
@@ -76,13 +77,18 @@ export default function Post({ post }) {
     <div>
       <Navbar />
       <MobileMenu />
-      <div>
-        <h2>{post.title}</h2>
-      </div>
-      <div>
-        <p>{post.author.name}</p>
-        {/* display sanitized HTML */}
-        <div dangerouslySetInnerHTML={{ __html: sanitizedHtml }} />
+      <div className="p-10">
+        <div className="pt-[100px]">
+          <h2 className="text-4xl font-extrabold">{post.title}</h2>
+        </div>
+        <div>
+          <Image src={post.author.photo} />
+          <p className="mb-4">{post.author.name}</p>
+          {/* display sanitized HTML */}
+          <div>
+            <div dangerouslySetInnerHTML={{ __html: sanitizedHtml }} />
+          </div>
+        </div>
       </div>
     </div>
   );

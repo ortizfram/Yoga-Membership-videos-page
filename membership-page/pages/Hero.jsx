@@ -17,23 +17,23 @@ const Hero = () => {
       <div className="hidden md:grid grid-cols-2 content-between justify-items-center items-center">
         {/* ___profile pic */}
         <img
-          className="grid w-[120px] h-[120px] my-4 object-cover rounded-full"
+          className="grid w-[60px] h-[60px] my-4 object-cover rounded-full"
           src={session?.user?.image}
           alt="dp"
         />
         {/* ___message */}
         <div className="flex flex-col items-center justify-center text-white/40">
-          <h3 className="text-2xl text-white/75">{session?.user?.name}</h3>
+          <h3 className="text-xl font-thin text-white/75">
+            {session?.user?.name}
+          </h3>
           <p>Bienvenido/a a...</p>
         </div>
       </div>
 
       <div className="uppercase text-center text-white font-extrabold">
-        <h3 className="text-xl font-serif font-thin underline">
-          Kundalini Marcela.
-        </h3>
+        <h3 className="text-2xl font-thin">Kundalini Marcela.</h3>
         <h1 className="text-2xl md:text-8xl sm:text-6xl">Kundalini</h1>
-        <h3 className="text-2xl">para la vida.</h3>
+        <h3 className="text-xl mt-[-2vh] md:mt-[-3vh]">para la vida.</h3>
       </div>
       <div className="pt-[10vh]">
         <Slider />
