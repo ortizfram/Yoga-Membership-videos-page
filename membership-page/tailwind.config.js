@@ -26,12 +26,20 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     extend: {
+      dropShadow: {
+        "3xl": "0 35px 35px rgba(0, 0, 0, 0.25)",
+        "4xl": [
+          "0 35px 35px rgba(0, 0, 0, 0.25)",
+          "0 45px 65px rgba(0, 0, 0, 0.15)",
+        ],
+      },
       backgroundImage: {
         "hero-image":
           'url("https://images.pexels.com/photos/906097/pexels-photo-906097.jpeg?auto=compress&cs=tinysrgb&w=1600")',
         "contact-image":
           'url("https://images.pexels.com/photos/539694/pexels-photo-539694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
         "login-image": 'url("/login-2.jpg")',
+        "blog-image": 'url("/blog-image.jpg")',
       },
     },
   },

@@ -1,7 +1,7 @@
 import MobileMenu from "@/components/MobileMenu";
 import Navbar from "@/components/Navbar";
 import { GraphQLClient, gql } from "graphql-request";
-import Image from "next/image"; // for covers and thumbnails
+import Image from "next/image";
 import Link from "next/link";
 
 const hygraph = new GraphQLClient(
@@ -47,28 +47,32 @@ export async function getStaticProps() {
 
 export default function Blog({ posts }) {
   return (
-    <div>
+    <div className="bg-blog-image w-full bg-h-screen bg-cover bg-center">
       <Navbar />
       <MobileMenu />
-      <div>
-        <h2 className="font-bold text-6xl mb-8">Blog</h2>
-      </div>
-      <div>
-        {posts.map(({ id, title, slug, coverImage }) => (
-          <div key={id}>
-            <div>
-              <Image
-                src={coverImage.url}
-                alt="blog post cover image"
-                width={150}
-                height={150}
-              />
+      <div className="container mx-auto py-16">
+        <h2 className="font-bold text-6xl mb-8 text-white">Blog</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {posts.map(({ id, title, slug, coverImage }) => (
+            <div key={id} className="text-center">
+              <div>
+                <Link href={`/post/${slug}`}>
+                  <Image
+                    src={coverImage.url}
+                    alt="blog post cover image"
+                    width={300}
+                    height={300}
+                    className="transition-opacity hover:opacity-75 rounded-t-[26px]"
+                  />
+                </Link>
+              </div>
+              <h2 className="text-2xl">
+                <Link href={`/post/${slug}`}>{title}</Link>
+              </h2>
             </div>
-            <h2>
-              <Link href={`/post/${slug}`}>{title}</Link>
-            </h2>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

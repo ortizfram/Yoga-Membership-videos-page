@@ -1,6 +1,6 @@
 import { FcGoogle } from "react-icons/fc";
 import { signIn } from "next-auth/react";
-
+//
 const Login = () => {
   return (
     <div className="m-auto grid grid-cols-1 md:grid-cols-2 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 drop-shadow-2xl">
