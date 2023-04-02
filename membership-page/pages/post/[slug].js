@@ -64,7 +64,7 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Post({ post }) {
+export default function Post({ post, author }) {
   const sanitizedHtml = sanitizeHtml(post.content.html, {
     allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
     allowedAttributes: {
@@ -77,17 +77,27 @@ export default function Post({ post }) {
     <div>
       <Navbar />
       <MobileMenu />
-      <div className="p-10">
-        <div className="pt-[100px]">
-          <h2 className="text-4xl font-extrabold">{post.title}</h2>
+      <div className="p-10 bg-gray-100">
+        <div className="pt-16">
+          <h2 className="text-4xl font-extrabold text-center mb-8">
+            {post.title}
+          </h2>
         </div>
-        <div>
-          <Image src={post.author.photo} />
-          <p className="mb-4">{post.author.name}</p>
-          {/* display sanitized HTML */}
-          <div>
-            <div dangerouslySetInnerHTML={{ __html: sanitizedHtml }} />
+        <div className="max-w-2xl mx-auto text-gray-700">
+          <div className="flex items-center mb-6">
+            <Image
+              src={post.author.photo}
+              width={50}
+              height={50}
+              className="rounded-full mr-4"
+            />
+            <p className="text-lg font-bold">{post.author.name}</p>
           </div>
+          {/* display sanitized HTML */}
+          <div
+            className="prose max-w-none"
+            dangerouslySetInnerHTML={{ __html: sanitizedHtml }}
+          />
         </div>
       </div>
     </div>
