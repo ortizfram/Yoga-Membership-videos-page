@@ -35,6 +35,15 @@ const MobileMenu = ({ showMenu, hideMenu, active }) => {
         </Link>
       </li>
       <li>
+        <Link
+          onClick={handleLinkClick}
+          href="/"
+          className="font-extrabold hover:text-golden hover:underline "
+        >
+          Talleres
+        </Link>
+      </li>
+      <li>
         <Link onClick={handleLinkClick} href="/#contact">
           Contacto
         </Link>

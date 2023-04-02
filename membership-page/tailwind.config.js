@@ -33,6 +33,9 @@ module.exports = {
           "0 45px 65px rgba(0, 0, 0, 0.15)",
         ],
       },
+      colors: {
+        golden: "#FFDF00",
+      },
       backgroundImage: {
         "hero-image":
           'url("https://images.pexels.com/photos/906097/pexels-photo-906097.jpeg?auto=compress&cs=tinysrgb&w=1600")',

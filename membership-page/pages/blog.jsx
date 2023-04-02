@@ -74,7 +74,6 @@ export default function Blog({ posts }) {
                     className="object-cover  transition-opacity  h-full w-full rounded-t-[26px] transform scale-125 duration-500"
                   />
                 </Link>
-                <p>{categories.name}</p>
               </div>
               <h2 className="text-2xl text-gray-700 px-4 py-2">
                 <Link href={`/post/${slug}`}>{title}</Link>

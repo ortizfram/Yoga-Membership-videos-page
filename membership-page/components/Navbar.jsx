@@ -38,6 +38,12 @@ const Navbar = () => {
             <Link href="/">Inicio</Link>
             <Link href="/#about">Acerca</Link>
             <Link href="/blog">Clases</Link>
+            <Link
+              href="/"
+              className=" font-extrabold hover:text-golden hover:underline"
+            >
+              Talleres
+            </Link>
             <Link href="/#contact">Contacto</Link>
           </li>
         </ul>
