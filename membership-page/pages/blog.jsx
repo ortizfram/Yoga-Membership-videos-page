@@ -51,27 +51,34 @@ export default function Blog({ posts }) {
       <Navbar />
       <MobileMenu />
       <div className="container mx-auto py-[20vh]">
-        <h2 className="font-bold text-6xl mb-8 text-white">Clases</h2>
+        <h2 className="font-bold text-6xl mb-8 text-white select-none">
+          Clases
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {posts.map(({ id, title, slug, coverImage }) => (
-            <div key={id} className="text-center">
-              <div>
-                <div className="flex flex-col items-center">
-                  <Link href={`/post/${slug}`}>
-                    <Image
-                      src={coverImage.url}
-                      alt="blog post cover image"
-                      width={300}
-                      height={300}
-                      className="transition-opacity hover:opacity-75 rounded-t-[26px]"
-                    />
-                  </Link>
-                </div>
-                <h2 className="text-2xl text-gray-700">
-                  <Link href={`/post/${slug}`}>{title}</Link>
-                </h2>
+          {posts.map(({ id, title, slug, coverImage, categories }) => (
+            <div
+              key={id}
+              className="text-center hover:bg-indigo-100 bg-white rounded-lg overflow-hidden"
+            >
+              <div className="h-64 overflow-hidden">
+                <Link href={`/post/${slug}`}>
+                  <Image
+                    src={coverImage.url}
+                    alt="blog post cover image"
+                    width={300}
+                    height={300}
+                    ty-75
+                    object-cover
+                    w
+                    className="object-cover  transition-opacity  h-full w-full rounded-t-[26px] transform scale-125 duration-500"
+                  />
+                </Link>
+                <p>{categories.name}</p>
               </div>
+              <h2 className="text-2xl text-gray-700 px-4 py-2">
+                <Link href={`/post/${slug}`}>{title}</Link>
+              </h2>
             </div>
           ))}
         </div>
