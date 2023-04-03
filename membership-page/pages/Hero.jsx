@@ -2,6 +2,8 @@ import React from "react";
 import Slider from "../components/Slider";
 //
 import { useSession, getSession } from "next-auth/react";
+import Login from "@/components/Login";
+import Image from "next/image";
 
 const Hero = () => {
   // ___ if not session, return Login page
@@ -16,7 +18,7 @@ const Hero = () => {
       {/* WELCOME */}
       <div className="hidden md:grid grid-cols-2 content-between justify-items-center items-center">
         {/* ___profile pic */}
-        <img
+        <Image
           className="grid w-[60px] h-[60px] my-4 object-cover rounded-full"
           src={session?.user?.image}
           alt="dp"
