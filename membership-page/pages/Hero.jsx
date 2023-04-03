@@ -22,6 +22,8 @@ const Hero = () => {
           className="grid w-[60px] h-[60px] my-4 object-cover rounded-full"
           src={session?.user?.image}
           alt="dp"
+          width={150}
+          height={150}
         />
         {/* ___message */}
         <div className="flex flex-col items-center justify-center text-white/40">
