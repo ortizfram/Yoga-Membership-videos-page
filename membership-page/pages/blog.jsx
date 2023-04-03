@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import { GraphQLClient, gql } from "graphql-request";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const hygraph = new GraphQLClient(
   "https://api-sa-east-1.hygraph.com/v2/clf4izifj4o1a01t7f0c3e6m0/master"
@@ -46,6 +47,22 @@ export async function getStaticProps() {
 }
 
 export default function Blog({ posts }) {
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  // Filter the posts array based on the selected category
+  const filteredPosts = selectedCategory
+    ? posts.filter(({ categories }) =>
+        categories.some(({ slug }) => slug === selectedCategory)
+      )
+    : posts;
+
+  // Extract an array of all category slugs
+  const categorySlugs = Array.from(
+    new Set(
+      posts.flatMap(({ categories }) => categories.map(({ slug }) => slug))
+    )
+  );
+
   return (
     <div className="bg-blog-image min-h-screen bg-center bg-cover">
       <Navbar />
@@ -63,20 +80,19 @@ export default function Blog({ posts }) {
               id="categories link"
               className="flex md:flex-row flex-col pb-4 ml-[-40px] p-1 bg-slate-100 rounded-md max-w-[34ch] text-center place-content-center"
             >
-              <li>
-                <Link href="#" className="hover:text-slate-500 text-slate-700">
-                  clase
-                </Link>
-                <Link href="#" className="hover:text-slate-500 text-slate-700">
-                  taller
-                </Link>
-                <Link href="#" className="hover:text-slate-500 text-slate-700">
-                  teoría
-                </Link>
-                <Link href="#" className="hover:text-slate-500 text-slate-700">
-                  últimos
-                </Link>
-              </li>
+              {categorySlugs.map((slug) => (
+                <li key={slug} className="mr-2">
+                  <Link
+                    href={`/category/${slug}`}
+                    className={`hover:text-slate-500 text-slate-700 ${
+                      slug === selectedCategory ? "underline font-bold" : ""
+                    }`}
+                    onClick={() => setSelectedCategory(slug)}
+                  >
+                    {slug}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
