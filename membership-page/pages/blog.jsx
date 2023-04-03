@@ -47,22 +47,6 @@ export async function getStaticProps() {
 }
 
 export default function Blog({ posts }) {
-  const [selectedCategory, setSelectedCategory] = useState(null);
-
-  // Filter the posts array based on the selected category
-  const filteredPosts = selectedCategory
-    ? posts.filter(({ categories }) =>
-        categories.some(({ slug }) => slug === selectedCategory)
-      )
-    : posts;
-
-  // Extract an array of all category slugs
-  const categorySlugs = Array.from(
-    new Set(
-      posts.flatMap(({ categories }) => categories.map(({ slug }) => slug))
-    )
-  );
-
   return (
     <div className="bg-blog-image min-h-screen bg-center bg-cover">
       <Navbar />

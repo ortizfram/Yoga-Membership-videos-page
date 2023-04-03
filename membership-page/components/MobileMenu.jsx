@@ -37,7 +37,7 @@ const MobileMenu = ({ showMenu, hideMenu, active }) => {
       <li>
         <Link
           onClick={handleLinkClick}
-          href="/"
+          href="/taller"
           className="font-extrabold hover:text-golden hover:underline "
         >
           Talleres

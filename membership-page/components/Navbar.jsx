@@ -39,7 +39,7 @@ const Navbar = () => {
             <Link href="/#about">Acerca</Link>
             <Link href="/blog">Clases</Link>
             <Link
-              href="/"
+              href="/taller"
               className=" font-extrabold hover:text-golden hover:underline"
             >
               Talleres
