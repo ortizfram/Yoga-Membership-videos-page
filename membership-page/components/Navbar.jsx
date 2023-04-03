@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
 import MenuIcon from "@mui/icons-material/Menu";
+import HomeIcon from "@mui/icons-material/Home";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -35,7 +36,9 @@ const Navbar = () => {
           style={{ scrollBehavior: "smooth" }}
         >
           <li>
-            <Link href="/">Inicio</Link>
+            <Link href="/">
+              <HomeIcon />
+            </Link>
             <Link href="/#about">Acerca</Link>
             <Link href="/blog">Clases</Link>
             <Link

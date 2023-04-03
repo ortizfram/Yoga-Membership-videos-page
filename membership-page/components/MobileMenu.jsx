@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import CloseIcon from "@mui/icons-material/Close";
+import HomeIcon from "@mui/icons-material/Home";
 
 const MobileMenu = ({ showMenu, hideMenu, active }) => {
   const handleLinkClick = () => {
@@ -21,7 +22,7 @@ const MobileMenu = ({ showMenu, hideMenu, active }) => {
       </li>
       <li>
         <Link onClick={handleLinkClick} href="/">
-          Inicio
+          <HomeIcon />
         </Link>
       </li>
       <li>

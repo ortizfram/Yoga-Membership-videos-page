@@ -2,6 +2,7 @@ import React from "react";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const Contact = () => {
   return (
@@ -17,8 +18,9 @@ const Contact = () => {
 
       {/* container for icons */}
       <div class="sm:items-center sm:max-w-[432px] sm:flex sm:text-center sm:justify-between shadow-xl rounded-r-2xl rounded-t-2xl bg-black300/20 backdrop-blur-lg p-8 mx-[100px]">
-        <InstagramIcon className="mx-5 text-white scale-150 hover:text-white/50 cursor-pointer" />
+        <YouTubeIcon className="mx-5 text-white scale-150 hover:text-white/50 cursor-pointer" />
         <WhatsAppIcon className="mx-5 text-white scale-150 hover:text-white/50 cursor-pointer" />
+        <InstagramIcon className="mx-5 text-white scale-150 hover:text-white/50 cursor-pointer" />
         <EmailIcon className="mx-5 text-white scale-150 hover:text-white/50 cursor-pointer" />
       </div>
     </div>
