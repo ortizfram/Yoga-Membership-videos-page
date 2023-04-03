@@ -51,10 +51,32 @@ export default function Blog({ posts }) {
       <Navbar />
       <MobileMenu />
       <div className="container mx-auto py-[20vh]">
-        <h2 className="font-bold text-6xl mb-8 text-white select-none">
-          Clases
-        </h2>
-
+        <div className="grid grid-cols-2">
+          <h2 className="grid font-bold text-6xl mb-8 text-white select-none">
+            Clases
+          </h2>
+          <div className="grid p-2">
+            <h3 className="underline select-none font-bold text-white">
+              Categorias
+            </h3>
+            <ul id="categories link" className="flex flex-row">
+              <li>
+                <Link href="#" className="hover:text-slate-200 text-slate-700">
+                  clase
+                </Link>
+                <Link href="#" className="hover:text-slate-200 text-slate-700">
+                  taller
+                </Link>
+                <Link href="#" className="hover:text-slate-200 text-slate-700">
+                  teoría
+                </Link>
+                <Link href="#" className="hover:text-slate-200 text-slate-700">
+                  últimos
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {posts.map(({ id, title, slug, coverImage, categories }) => (
             <div
