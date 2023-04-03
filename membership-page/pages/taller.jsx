@@ -48,7 +48,7 @@ export async function getStaticProps() {
 
 export default function Taller({ tallers }) {
   return (
-    <div className="bg-blog-image min-h-screen bg-center bg-cover">
+    <div className="bg-taller-image min-h-screen bg-center bg-cover">
       <Navbar />
       <MobileMenu />
       <div className="container mx-auto py-[20vh]">
@@ -56,6 +56,13 @@ export default function Taller({ tallers }) {
           <h2 className="grid font-bold text-4xl md:text-6xl mb-8 text-white select-none">
             🌌 Talleres Presenciales
           </h2>
+          <p>
+            para acceder a este contenido debes ser{" "}
+            <Link href={"#"} className="underline">
+              miembro premium
+            </Link>
+            . Accedes a beneficios
+          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {tallers.map(({ id, title, slug, coverImage, categories }) => (

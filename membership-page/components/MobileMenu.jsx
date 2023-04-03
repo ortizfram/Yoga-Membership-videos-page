@@ -40,7 +40,7 @@ const MobileMenu = ({ showMenu, hideMenu, active }) => {
           href="/taller"
           className="font-extrabold hover:text-golden hover:underline "
         >
-          Talleres
+          🍁Talleres
         </Link>
       </li>
       <li>

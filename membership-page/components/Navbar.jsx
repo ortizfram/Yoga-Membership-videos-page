@@ -42,6 +42,7 @@ const Navbar = () => {
               href="/taller"
               className=" font-extrabold hover:text-golden hover:underline"
             >
+              <span>🍁</span>
               Talleres
             </Link>
             <Link href="/#contact">Contacto</Link>

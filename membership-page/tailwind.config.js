@@ -43,6 +43,8 @@ module.exports = {
           'url("https://images.pexels.com/photos/539694/pexels-photo-539694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
         "login-image": 'url("/login-2.jpg")',
         "blog-image": 'url("/blog-image.jpg")',
+        "taller-image":
+          'url("https://viapais.com.ar/resizer/XdG3RA78sO-bTN3ldcwTIWntH8I=/1200x630/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/FAAOL6NFXBHNHM7AH5EI6QBCPQ.jpg")',
       },
     },
   },

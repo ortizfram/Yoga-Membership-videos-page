@@ -77,9 +77,9 @@ export default function Post({ post, author }) {
     <div>
       <Navbar />
       <MobileMenu />
-      <div className="p-10 bg-gray-100">
-        <div className="pt-16">
-          <h2 className="text-4xl font-extrabold text-center mb-8">
+      <div className="p-10 bg-indigo-100">
+        <div className="pt-20">
+          <h2 className="text-4xl font-extrabold text-center mb-8 text-indigo-700">
             {post.title}
           </h2>
         </div>
@@ -91,7 +91,9 @@ export default function Post({ post, author }) {
               height={50}
               className="rounded-full mr-4"
             />
-            <p className="text-lg font-bold">{post.author.name}</p>
+            <p className="text-lg font-bold text-indigo-500">
+              {post.author.name}
+            </p>
           </div>
           {/* display sanitized HTML */}
           <div
