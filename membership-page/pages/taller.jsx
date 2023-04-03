@@ -51,17 +51,19 @@ export default function Taller({ tallers }) {
     <div className="bg-taller-image min-h-screen bg-center bg-cover">
       <Navbar />
       <MobileMenu />
+
       <div className="container mx-auto py-[20vh]">
-        <div className="mx-auto text-left">
-          <h2 className="grid font-bold text-4xl md:text-6xl mb-8 text-white select-none">
+        <div className="mx-auto text-left  mb-8">
+          <h2 className="grid font-bold text-4xl md:text-6xl text-white select-none">
             🌌 Talleres Presenciales
           </h2>
-          <p>
-            para acceder a este contenido debes ser{" "}
-            <Link href={"#"} className="underline">
+          <p className="text-white  max-w-[80ch] text-lg">
+            Para acceder a este contenido debes ser
+            <Link href={"#"} className="underline m-2">
               miembro premium
             </Link>
-            . Accedes a beneficios
+            .Accedes a beneficios como ver antiguos talleres y participar de
+            nuevos. Además de der totalmente personalizados
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
