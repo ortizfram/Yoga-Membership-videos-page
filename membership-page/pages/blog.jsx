@@ -51,26 +51,29 @@ export default function Blog({ posts }) {
       <Navbar />
       <MobileMenu />
       <div className="container mx-auto py-[20vh]">
-        <div className="grid grid-cols-2">
+        <div className="grid md:grid-cols-2 grid-cols-1">
           <h2 className="grid font-bold text-6xl mb-8 text-white select-none">
             Clases
           </h2>
-          <div className="grid p-2">
+          <div className="grid md:p-2 gap-y-4  mb-4 justify-center">
             <h3 className="underline select-none font-bold text-white">
               Categorias
             </h3>
-            <ul id="categories link" className="flex flex-row">
+            <ul
+              id="categories link"
+              className="flex md:flex-row flex-col pb-4 ml-[-40px] p-1 bg-slate-100 rounded-md max-w-[34ch] text-center place-content-center"
+            >
               <li>
-                <Link href="#" className="hover:text-slate-200 text-slate-700">
+                <Link href="#" className="hover:text-slate-500 text-slate-700">
                   clase
                 </Link>
-                <Link href="#" className="hover:text-slate-200 text-slate-700">
+                <Link href="#" className="hover:text-slate-500 text-slate-700">
                   taller
                 </Link>
-                <Link href="#" className="hover:text-slate-200 text-slate-700">
+                <Link href="#" className="hover:text-slate-500 text-slate-700">
                   teoría
                 </Link>
-                <Link href="#" className="hover:text-slate-200 text-slate-700">
+                <Link href="#" className="hover:text-slate-500 text-slate-700">
                   últimos
                 </Link>
               </li>
