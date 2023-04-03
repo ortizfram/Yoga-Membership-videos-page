@@ -72,29 +72,6 @@ export default function Blog({ posts }) {
           <h2 className="grid font-bold text-6xl mb-8 text-white select-none">
             Clases
           </h2>
-          <div className="grid md:p-2 gap-y-4  mb-4 justify-center">
-            <h3 className="underline select-none font-bold text-white">
-              Categorias
-            </h3>
-            <ul
-              id="categories link"
-              className="flex md:flex-row flex-col pb-4 ml-[-40px] p-1 bg-slate-100 rounded-md max-w-[34ch] text-center place-content-center"
-            >
-              {categorySlugs.map((slug) => (
-                <li key={slug} className="mr-2">
-                  <Link
-                    href={`/category/${slug}`}
-                    className={`hover:text-slate-500 text-slate-700 ${
-                      slug === selectedCategory ? "underline font-bold" : ""
-                    }`}
-                    onClick={() => setSelectedCategory(slug)}
-                  >
-                    {slug}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {posts.map(({ id, title, slug, coverImage, categories }) => (
