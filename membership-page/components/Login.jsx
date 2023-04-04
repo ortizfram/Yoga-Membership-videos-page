@@ -1,4 +1,5 @@
 import { FcGoogle } from "react-icons/fc";
+import { BsTwitter } from "react-icons/bs";
 import { signIn } from "next-auth/react";
 //
 const Login = () => {
@@ -31,17 +32,28 @@ const Login = () => {
       </div>
 
       {/* register */}
-      <div
-        onClick={() => signIn("google")}
-        className="flex items-center justify-center flex-col m-auto p-8"
-      >
+      <div className="flex items-center justify-center flex-col m-auto p-8">
         <h3 className="text-2xl sm:text-6xl font-bold text-white">
           Sé miembro
         </h3>
         <p className="text-white">comienza con tu experiencia.</p>
-        <div className="flex gap-4 cursor-pointer drop-shadow-2xl mt-4 px-6 p-4 rounded-[6px] bg-white text-black">
+
+        {/* google */}
+        <div
+          onClick={() => signIn("google")}
+          className="flex gap-4 cursor-pointer drop-shadow-2xl mt-4 px-6 p-4 rounded-[6px] bg-white text-black"
+        >
           <FcGoogle className="text-[30px]" />
-          Registrate
+          Regístrate
+        </div>
+
+        {/* twitter */}
+        <div
+          onClick={() => signIn("twitter")}
+          className="flex gap-4 cursor-pointer drop-shadow-2xl mt-4 px-6 p-4 rounded-[6px] bg-white text-black"
+        >
+          <BsTwitter className="text-[30px] text-blue-400" />
+          Regístrate
         </div>
       </div>
     </div>
