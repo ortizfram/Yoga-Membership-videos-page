@@ -18,6 +18,7 @@ const QUERY = gql`
           url
         }
       }
+      title
       description
       coverImage {
         url
@@ -82,7 +83,7 @@ export default function Taller({ taller }) {
         <div className="max-w-2xl mx-auto text-gray-700">
           <div className="flex items-center mb-6">
             <Image
-              src={taller.author.photo}
+              src={taller.author.photo.url}
               width={50}
               height={50}
               className="rounded-full mr-4"

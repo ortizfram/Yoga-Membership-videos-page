@@ -86,7 +86,7 @@ export default function Post({ post, author }) {
         <div className="max-w-2xl mx-auto text-gray-700">
           <div className="flex items-center mb-6">
             <Image
-              src={post.author.photo}
+              src={post.author.photo.url}
               width={50}
               height={50}
               className="rounded-full mr-4"
