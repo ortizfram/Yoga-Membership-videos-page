@@ -37,7 +37,6 @@ const Login = () => {
           Sé miembro
         </h3>
         <p className="text-white">comienza con tu experiencia.</p>
-
         {/* google */}
         <div
           onClick={() => signIn("google")}
@@ -46,15 +45,14 @@ const Login = () => {
           <FcGoogle className="text-[30px]" />
           Regístrate
         </div>
-
-        {/* twitter */}
+        {/* twitter
         <div
           onClick={() => signIn("twitter")}
           className="flex gap-4 cursor-pointer drop-shadow-2xl mt-4 px-6 p-4 rounded-[6px] bg-white text-black"
         >
           <BsTwitter className="text-[30px] text-blue-400" />
-          Regístrate
-        </div>
+          <p className="text-black">Regístrate</p>
+        </div> */}
       </div>
     </div>
   );
