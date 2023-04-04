@@ -13,20 +13,20 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="bg-hero-image w-full h-screen bg-cover bg-center flex items-center px-6 flex-col pt-[20vh]"
+      className="grid 2xl:grid-cols-2 mx-auto grid-cols-1 bg-hero-image w-full h-screen bg-cover bg-center pt-[30vh] px-4"
     >
       {/* WELCOME */}
-      <div className="hidden md:grid grid-cols-2 content-between justify-items-center items-center">
+      <div className="hidden md:flex-row md:gap-x-2">
         {/* ___profile pic */}
         <Image
-          className="grid w-[60px] h-[60px] my-4 object-cover rounded-full"
+          className="w-[60px] h-[60px] object-cover rounded-full"
           src={session?.user?.image}
           alt="dp"
-          width={150}
-          height={150}
+          width={1200}
+          height={1200}
         />
         {/* ___message */}
-        <div className="flex flex-col items-center justify-center text-white/40">
+        <div className="justify-center text-white/40">
           <h3 className="text-xl font-thin text-white/75">
             {session?.user?.name}
           </h3>
@@ -36,12 +36,13 @@ const Hero = () => {
 
       <div className="uppercase text-center text-white font-extrabold">
         <h3 className="text-2xl font-thin">Kundalini Marcela.</h3>
-        <h1 className="text-2xl md:text-8xl sm:text-6xl">Kundalini</h1>
-        <h3 className="text-xl gap-y-2">para la vida.</h3>
+        <h1 className="text-2xl 2xl:text-[8vw] md:text-8xl sm:text-6xl">
+          Kundalini
+        </h1>
+        <h3 className="text-xl 2xl:text-[2vw] gap-y-2">para la vida.</h3>
       </div>
-      <div className="pt-[10vh]">
-        <Slider />
-      </div>
+
+      <Slider />
     </div>
   );
 };
