@@ -58,30 +58,35 @@ export default function Blog({ posts }) {
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {posts.map(({ id, title, slug, coverImage, categories }) => (
-            <div
-              key={id}
-              className="text-center hover:bg-indigo-100 bg-white rounded-lg overflow-hidden"
-            >
-              <div className="h-64 overflow-hidden">
-                <Link href={`/post/${slug}`}>
-                  <Image
-                    src={coverImage.url}
-                    alt="blog post cover image"
-                    width={300}
-                    height={300}
-                    ty-75
-                    object-cover
-                    w
-                    className="object-cover  transition-opacity  h-full w-full rounded-t-[26px] transform scale-125 duration-500"
-                  />
-                </Link>
+          {posts.map(
+            ({ id, title, slug, coverImage, categories, description }) => (
+              <div
+                key={id}
+                className="text-center hover:bg-indigo-100 bg-white rounded-lg overflow-hidden"
+              >
+                <div className="h-64 overflow-hidden">
+                  <Link href={`/post/${slug}`}>
+                    <Image
+                      src={coverImage.url}
+                      alt="blog post cover image"
+                      width={1200}
+                      height={1200}
+                      ty-75
+                      object-cover
+                      w
+                      className="object-cover  transition-opacity  h-full w-full rounded-t-[26px] transform scale-125 duration-500"
+                    />
+                  </Link>
+                </div>
+                <h2 className="text-2xl text-gray-700 px-4 py-2">
+                  <Link href={`/post/${slug}`}>{title}</Link>
+                </h2>
+                <p className=" text-gray-700 text-sm mx-auto px-4 py-2">
+                  <Link href={`/post/${slug}`}>{description}</Link>
+                </p>
               </div>
-              <h2 className="text-2xl text-gray-700 px-4 py-2">
-                <Link href={`/post/${slug}`}>{title}</Link>
-              </h2>
-            </div>
-          ))}
+            )
+          )}
         </div>
       </div>
     </div>
