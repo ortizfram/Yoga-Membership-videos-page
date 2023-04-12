@@ -15,9 +15,9 @@ const Navbar = () => {
     <div className="fixed w-full text-white flex justify-between p-4 items-center z-40">
       <Link href="/">
         {/* logo */}
-        <div className="cursor-pointer text-2xl font-bold text-center uppercase border-2 p-2 shadow-xl bg-black/20 backdrop-blur-sm">
+        <div className="flex justify-center cursor-pointer text-3xl font-bold text-center uppercase border-2 p-3 shadow-xl bg-black/20 backdrop-blur-sm">
           <h1>
-            K <span className="block text-4xl">M</span>
+            B<br />V
           </h1>
         </div>
       </Link>
