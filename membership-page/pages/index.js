@@ -23,6 +23,7 @@ export default function Home() {
         <MobileMenu />
         <div>
           {/* HOMEPAGE */}
+          {/*  */}
           <Hero />
           <Acerca />
           <Contact />
