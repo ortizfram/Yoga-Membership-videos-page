@@ -13,7 +13,7 @@ const mp_checkout = () => {
     <>
       <Head>
         {/* Import Mercado Pago */}
-        <script src="https://sdk.mercadopago.com/js/v2"></script>
+        <script async src="https://sdk.mercadopago.com/js/v2"></script>
       </Head>
       <main>
         {/* CardForm */}

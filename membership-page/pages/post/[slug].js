@@ -90,6 +90,7 @@ export default function Post({ post, author }) {
               width={50}
               height={50}
               className="rounded-full mr-4"
+              alt=""
             />
             <p className="text-lg font-bold text-indigo-500">
               {post.author.name}
