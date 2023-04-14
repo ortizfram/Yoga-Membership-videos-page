@@ -1,5 +1,5 @@
-import Login from "@/components/Login";
-import Navbar from "@/components/Navbar";
+import { Login } from "../components/Login.jsx";
+import Navbar from "../components/Navbar.jsx";
 import Acerca from "./Acerca";
 import Contact from "./Contact";
 import Hero from "./Hero";
