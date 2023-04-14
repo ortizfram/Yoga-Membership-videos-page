@@ -1,6 +1,7 @@
+// components/Login.jsx
 import { FcGoogle } from "react-icons/fc";
 import { BsTwitter } from "react-icons/bs";
-import { signIn } from "next-auth/react";
+import { signIn, signOut } from "next-auth/react";
 //
 const Login = () => {
   return (
@@ -9,9 +10,9 @@ const Login = () => {
       <div className="relative bg-login-image bg-cover bg-center h-screen">
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-extrabold">
-          <h3 className="text-xl font-thin">Kundalini Marcela.</h3>
-          <h1 className="text-2xl sm:text-6xl">Kundalini</h1>
-          <h3 className="text-2xl">para la vida.</h3>
+          <h3 className="text-xl font-thin">Estilo de vida</h3>
+          <h1 className="text-2xl sm:text-6xl">Buona Vibra</h1>
+          <h3 className="text-2xl">Yoga Kundalini.</h3>
 
           {/* scroll down arrow */}
           <div className="block md:hidden absolute bottom-[-100px] left-1/2 transform -translate-x-1/2 mb-2">
