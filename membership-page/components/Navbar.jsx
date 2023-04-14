@@ -8,6 +8,7 @@ import { useSession, getSession } from "next-auth/react"; //for profile pic retu
 import { signIn, signOut } from "next-auth/react"; // signout
 import Image from "next/image";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
+import { Login } from "../components/Login.jsx";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);

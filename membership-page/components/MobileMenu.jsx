@@ -4,6 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import HomeIcon from "@mui/icons-material/Home";
 import { signIn, signOut } from "next-auth/react"; // signout
 import { useSession, getSession } from "next-auth/react"; //for profile pic returning
+import { Login } from "../components/Login.jsx";
 
 const MobileMenu = ({ showMenu, hideMenu, active }) => {
   const handleLinkClick = () => {
