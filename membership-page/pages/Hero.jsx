@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "../components/Slider";
 //
 import { useSession, getSession } from "next-auth/react";
-import Login from "../components/Login.jsx";
+import Login from "../components/Login";
 import Image from "next/image";
 
 const Hero = () => {
