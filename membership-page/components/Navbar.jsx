@@ -75,7 +75,7 @@ const Navbar = () => {
               >
                 {/* dropdown ICON */}
                 <KeyboardDoubleArrowDownIcon
-                  className="absolute top-4 right-0 transform translate-x-1/2 -translate-y-full"
+                  className="absolute top-4 right-0 transform translate-x-1/2 -translate-y-full cursor-pointer"
                   style={{ width: "30px", height: "30px" }}
                 />
                 {/* profile PIC */}
@@ -84,7 +84,7 @@ const Navbar = () => {
                   alt="dp"
                   width={60}
                   height={60}
-                  className="object-cover rounded-full"
+                  className="object-cover rounded-full cursor-pointer border border-white"
                 />
               </div>
             </div>
@@ -93,7 +93,10 @@ const Navbar = () => {
           {/* SignOut */}
           {activeDropdown && (
             <div className="absolute top-full right-0 mt-2 bg-black/50 backdrop-blur-md py-2 px-4 rounded-md shadow-lg">
-              <button onClick={() => signOut()} className="px-4 py-2 font-bold">
+              <button
+                onClick={() => signOut()}
+                className="px-8 py-2 font-bold  bg-white/20"
+              >
                 Salir
               </button>
             </div>
