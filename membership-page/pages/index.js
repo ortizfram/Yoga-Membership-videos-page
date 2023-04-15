@@ -5,7 +5,7 @@ import Contact from "./Contact";
 import Hero from "./Hero";
 //
 import { useSession, getSession } from "next-auth/react";
-import MobileMenu from "@/components/MobileMenu";
+import MobileMenu from "../components/MobileMenu";
 import Head from "next/head";
 //
 

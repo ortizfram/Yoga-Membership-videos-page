@@ -1,5 +1,5 @@
-import MobileMenu from "@/components/MobileMenu";
-import Navbar from "@/components/Navbar";
+import MobileMenu from "../components/MobileMenu";
+import Navbar from "../components/Navbar";
 import { GraphQLClient, gql } from "graphql-request";
 import Image from "next/image";
 import Link from "next/link";

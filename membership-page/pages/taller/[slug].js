@@ -1,8 +1,8 @@
 import { GraphQLClient, gql } from "graphql-request";
 import Image from "next/image";
 import sanitizeHtml from "sanitize-html";
-import Navbar from "@/components/Navbar";
-import MobileMenu from "@/components/MobileMenu";
+import Navbar from "../../components/Navbar";
+import MobileMenu from "../../components/MobileMenu";
 
 const hygraph = new GraphQLClient(
   "https://api-sa-east-1.hygraph.com/v2/clf4izifj4o1a01t7f0c3e6m0/master"
