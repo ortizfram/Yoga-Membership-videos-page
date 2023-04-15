@@ -4,8 +4,9 @@ import { GraphQLClient, gql } from "graphql-request";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { createPreference } from "../pages/api/mercadopago/preference.jsx";
+import { mp_payment } from "../pages/mp_payment";
 
+// pages/blog.jsx
 const hygraph = new GraphQLClient(
   "https://api-sa-east-1.hygraph.com/v2/clf4izifj4o1a01t7f0c3e6m0/master"
 );
@@ -67,6 +68,7 @@ export default function Blog({ posts }) {
               >
                 <div className="h-64 overflow-hidden">
                   <Link href={`/post/${slug}`}>
+                    {/* <Link href="/mp_payment"> */}
                     <Image
                       src={coverImage.url}
                       alt="blog post cover image"
