@@ -7,6 +7,7 @@ import Hero from "./Hero";
 import { useSession, getSession } from "next-auth/react";
 import MobileMenu from "@/components/MobileMenu";
 import Head from "next/head";
+//
 
 export default function Home() {
   // ___ if not session, return Login page
