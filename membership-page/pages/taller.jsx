@@ -57,10 +57,10 @@ export default function Taller({ tallers }) {
           <h2 className="grid font-bold text-4xl md:text-6xl text-white select-none">
             🌌 Talleres Presenciales
           </h2>
-          <p className="text-white  max-w-[80ch] text-lg">
+          <p className="text-white  max-w-[80ch] text-lg mt-8 bg-black/40 p-4">
             Para acceder a este contenido debes ser
-            <Link href={"#"} className="underline m-2">
-              miembro premium
+            <Link href={"#"} className="underline m-2 font-bold">
+              miembro superior
             </Link>
             .Accedes a beneficios como ver antiguos talleres y participar de
             nuevos. Además de der totalmente personalizados
@@ -74,7 +74,8 @@ export default function Taller({ tallers }) {
                 className="text-center hover:bg-indigo-100 bg-white rounded-lg overflow-hidden"
               >
                 <div className="h-64 overflow-hidden">
-                  <Link href={`/taller/${slug}`}>
+                  {/* <Link href={`/taller/${slug}`}> */}
+                  <Link href="/subscribe/miembroSuperior">
                     <Image
                       src={coverImage.url}
                       alt="blog taller cover image"
@@ -88,10 +89,10 @@ export default function Taller({ tallers }) {
                   </Link>
                 </div>
                 <h2 className="text-2xl text-gray-700 px-4 py-2">
-                  <Link href={`/taller/${slug}`}>{title}</Link>
+                  <h2>{title}</h2>
                 </h2>
                 <p className=" text-gray-700 text-sm mx-auto px-4 py-2">
-                  <Link href={`/taller/${slug}`}>{description}</Link>
+                  <h2>{description}</h2>
                 </p>
               </div>
             )

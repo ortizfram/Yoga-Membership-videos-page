@@ -48,6 +48,7 @@ export default function Home(props: any) {
             {/*  */}
             <main className='flex items-center justify-center h-screen flex-col mx-auto'>
                 <code>Para prosseguir com o checkout clique em pagar</code>
+                {/* pay button */}
                 <div className="checkout-container" />
             </main>
         </>
@@ -55,14 +56,14 @@ export default function Home(props: any) {
 }
 
 export async function getServerSideProps(context: any) {
-    // Adicione as credenciais
+    // add credentials
     mercadopago.configure({
         access_token: process.env.MERCADO_PAGO_ACCESS_TOKEN || '',
 
     });
 
 
-    // Cria um objeto de preferência
+    // crea preferencia
     let preference = {
         items: [
             {
