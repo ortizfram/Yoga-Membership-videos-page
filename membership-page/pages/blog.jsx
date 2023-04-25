@@ -68,7 +68,6 @@ export default function Blog({ posts }) {
               >
                 <div className="h-64 overflow-hidden">
                   <Link href={`/post/${slug}`}>
-                    {/* <Link href="/mp_payment"> */}
                     <Image
                       src={coverImage.url}
                       alt="blog post cover image"

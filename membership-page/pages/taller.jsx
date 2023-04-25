@@ -74,8 +74,8 @@ export default function Taller({ tallers }) {
                 className="text-center hover:bg-indigo-100 bg-white rounded-lg overflow-hidden"
               >
                 <div className="h-64 overflow-hidden">
-                  {/* <Link href={`/taller/${slug}`}> */}
-                  <Link href="/subscribe/miembroSuperior">
+                  <Link href={`/taller/${slug}`}>
+                    {/* <Link href="/subscribe/miembroSuperior"> */}
                     <Image
                       src={coverImage.url}
                       alt="blog taller cover image"
