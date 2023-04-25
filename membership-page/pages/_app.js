@@ -18,7 +18,11 @@ export default function App({
         <Component {...pageProps} />
       </SignedIn>
       <SignedOut>
-        <SignIn />
+        <div className="bg-login-image bg-cover bg-center w-full">
+          <div className="mx-auto flex justify-center items-center p-4 h-screen">
+            <SignIn />
+          </div>
+        </div>
       </SignedOut>
     </ClerkProvider>
   );
