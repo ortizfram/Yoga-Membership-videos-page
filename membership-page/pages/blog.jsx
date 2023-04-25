@@ -4,7 +4,6 @@ import { GraphQLClient, gql } from "graphql-request";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { mp_payment } from "../pages/mp_payment";
 
 // pages/blog.jsx
 const hygraph = new GraphQLClient(
