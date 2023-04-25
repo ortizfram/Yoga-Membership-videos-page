@@ -18,7 +18,7 @@ const Contact = () => {
       </h1>
 
       {/* container for icons */}
-      <div class="sm:items-center sm:max-w-[432px] sm:flex sm:text-center sm:justify-between shadow-xl rounded-r-2xl rounded-t-2xl bg-black300/20 backdrop-blur-lg p-8 mx-[100px]">
+      <div class="sm:items-center sm:max-w-[600px] sm:flex sm:text-center sm:justify-between shadow-xl rounded-r-2xl rounded-t-2xl bg-black300/20 backdrop-blur-lg p-8 mx-[100px]">
         <Link href="http://www.youtube.com">
           <YouTubeIcon className="mx-5 text-white scale-150 hover:text-white/50 cursor-pointer" />
         </Link>
