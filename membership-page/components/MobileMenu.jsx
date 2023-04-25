@@ -19,7 +19,7 @@ const MobileMenu = ({ showMenu, hideMenu, active }) => {
     <ul
       className={
         active
-          ? "z-0 flex-col flex items-center fixed inset-0 left-1/4 uppercase gap-8 bg-black/40 backdrop-blur-lg justify-center p-8 md:hidden"
+          ? "z-0 flex-col flex items-center fixed inset-0 left-1/4 uppercase gap-8 bg-black/40 backdrop-blur-lg justify-center p-8 lg:hidden"
           : "hidden"
       }
     >

@@ -39,7 +39,7 @@ const Navbar = () => {
 
       {/* nav */}
       <nav>
-        <div className="absolute right-7 md:hidden top-6 scale-150">
+        <div className="absolute right-7 lg:hidden top-6 scale-150">
           <MenuIcon
             onClick={showMenu}
             className="scale-150 cursor-pointer shadow-lg bg-black/20 backdrop-blur-sm rounded-md "
@@ -47,7 +47,7 @@ const Navbar = () => {
         </div>
 
         <ul
-          className="hidden md:flex gap-8 p-6 uppercase  bg-black/30 backdrop-blur-lg items-center"
+          className="hidden lg:flex gap-8 p-6 uppercase  bg-black/30 backdrop-blur-lg items-center"
           style={{ scrollBehavior: "smooth" }}
         >
           <li>
