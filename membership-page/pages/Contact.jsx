@@ -19,10 +19,18 @@ const Contact = () => {
 
       {/* container for icons */}
       <div class="sm:items-center sm:max-w-[432px] sm:flex sm:text-center sm:justify-between shadow-xl rounded-r-2xl rounded-t-2xl bg-black300/20 backdrop-blur-lg p-8 mx-[100px]">
-        <YouTubeIcon className="mx-5 text-white scale-150 hover:text-white/50 cursor-pointer" />
-        <WhatsAppIcon className="mx-5 text-white scale-150 hover:text-white/50 cursor-pointer" />
-        <InstagramIcon className="mx-5 text-white scale-150 hover:text-white/50 cursor-pointer" />
-        <EmailIcon className="mx-5 text-white scale-150 hover:text-white/50 cursor-pointer" />
+        <Link href="http://www.youtube.com">
+          <YouTubeIcon className="mx-5 text-white scale-150 hover:text-white/50 cursor-pointer" />
+        </Link>
+        <Link href="https://wa.me/2615996913">
+          <WhatsAppIcon className="mx-5 text-white scale-150 hover:text-white/50 cursor-pointer" />
+        </Link>
+        <Link href="https://www.instagram.com/marcelamarzetti/">
+          <InstagramIcon className="mx-5 text-white scale-150 hover:text-white/50 cursor-pointer" />
+        </Link>
+        <Link href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=marzettimarcela@gmail.com&subject=Summer%20Party&body=Afiliado%20de%20Buona%20Vibra!">
+          <EmailIcon className="mx-5 text-white scale-150 hover:text-white/50 cursor-pointer" />
+        </Link>
       </div>
     </div>
   );
