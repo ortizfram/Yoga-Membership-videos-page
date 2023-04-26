@@ -22,10 +22,11 @@ const Hero = () => {
           width={600}
           height={600}
           alt=""
+          className=""
         />
       </div>
 
-      <Slider className="grid" />
+      {/* <Slider className="grid" /> */}
     </div>
   );
 };
