@@ -44,7 +44,7 @@ function Slider() {
 
   return (
     // container
-    <div className="md:grid lg:max-h-[600px] h-[40vh] w-[60vw]  md:max-w-[700px] 2xl:max-h-[900px] 2xl:h-[60vh] 2xl:max-w-[700px] m-auto relative group shadow-2xl mt-[-15px] gap-x-2 xl:px-8">
+    <div className="mt-[-100px] 2xl:mt-[250px] md:grid lg:max-h-[600px] h-[40vh] w-[60vw]  md:max-w-[700px] 2xl:max-h-[900px] 2xl:h-[60vh] 2xl:max-w-[700px] 2xl:mr-[170px] m-auto relative group shadow-2xl  xl:px-8">
       <div
         // link imgs
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}

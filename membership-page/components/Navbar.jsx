@@ -4,11 +4,10 @@ import Link from "next/link";
 import MobileMenu from "./MobileMenu";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
-import { useSession, getSession } from "next-auth/react"; //for profile pic returning
-import { signIn, signOut } from "next-auth/react"; // signout
+import { useUser } from "@clerk/clerk-react";
+import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
-import { Login } from "../components/Login.jsx";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -18,10 +17,11 @@ const Navbar = () => {
     setActiveDropdown(!activeDropdown);
   };
 
-  // ___ if not session, return Login page
-  const { data: session } = useSession();
-  if (!session) return <Login />;
+  const { user } = useUser();
 
+  if (!user) {
+    return null; // Return a loading state or redirect to a login page
+  }
   const showMenu = () => {
     setActive(!active);
   };
@@ -39,7 +39,7 @@ const Navbar = () => {
 
       {/* nav */}
       <nav>
-        <div className="absolute right-7 md:hidden top-6 scale-150">
+        <div className="absolute right-7 lg:hidden top-6 scale-150">
           <MenuIcon
             onClick={showMenu}
             className="scale-150 cursor-pointer shadow-lg bg-black/20 backdrop-blur-sm rounded-md "
@@ -47,7 +47,7 @@ const Navbar = () => {
         </div>
 
         <ul
-          className="hidden md:flex gap-8 p-6 uppercase  bg-black/30 backdrop-blur-lg items-center"
+          className="hidden lg:flex gap-8 p-6 uppercase  bg-black/30 backdrop-blur-lg items-center"
           style={{ scrollBehavior: "smooth" }}
         >
           <li>
@@ -69,39 +69,17 @@ const Navbar = () => {
           {/* ___profile pic */}
           <div className="relative">
             <div className="flex justify-end">
-              {/* dropdown */}
-              <div
-                className="w-[50px] h-[50px] relative"
-                onClick={toggleDropdown}
-              >
+              <div className="w-12 h-12 relative">
                 {/* dropdown ICON */}
                 <KeyboardDoubleArrowDownIcon
-                  className="absolute top-4 right-0 transform translate-x-1/2 -translate-y-full cursor-pointer"
+                  className="absolute top-4 right-0 transform  -translate-y-full cursor-pointer"
                   style={{ width: "30px", height: "30px" }}
                 />
-                {/* profile PIC */}
-                <Image
-                  src={session?.user?.image}
-                  alt="dp"
-                  width={60}
-                  height={60}
-                  className="object-cover rounded-full cursor-pointer border border-white"
-                />
+                {/* profile PIC and user settings*/}
+                <UserButton className=" object-cover cursor-pointer border-white w-[400px] h-[400px]" />
               </div>
             </div>
           </div>
-
-          {/* SignOut */}
-          {activeDropdown && (
-            <div className="absolute top-full right-0 mt-2 bg-black/50 backdrop-blur-md py-2 px-4 rounded-md shadow-lg">
-              <button
-                onClick={() => signOut()}
-                className="px-8 py-2 font-bold  bg-white/20"
-              >
-                Salir
-              </button>
-            </div>
-          )}
         </ul>
 
         <MobileMenu showMenu={showMenu} active={active} />

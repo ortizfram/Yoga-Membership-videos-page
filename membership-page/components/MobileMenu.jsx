@@ -2,9 +2,7 @@ import React from "react";
 import Link from "next/link";
 import CloseIcon from "@mui/icons-material/Close";
 import HomeIcon from "@mui/icons-material/Home";
-import { signIn, signOut } from "next-auth/react"; // signout
-import { useSession, getSession } from "next-auth/react"; //for profile pic returning
-import { Login } from "../components/Login.jsx";
+import { SignOutButton, useUser } from "@clerk/clerk-react";
 
 const MobileMenu = ({ showMenu, hideMenu, active }) => {
   const handleLinkClick = () => {
@@ -12,15 +10,16 @@ const MobileMenu = ({ showMenu, hideMenu, active }) => {
     hideMenu();
   };
 
-  // ___ if not session, return Login page
-  const { data: session } = useSession();
-  if (!session) return <Login />;
+  const { user } = useUser();
 
+  if (!user) {
+    return null; // Return a loading state or redirect to a login page
+  }
   return (
     <ul
       className={
         active
-          ? "z-0 flex-col flex items-center fixed inset-0 left-1/4 uppercase gap-8 bg-black/40 backdrop-blur-lg justify-center p-8 md:hidden"
+          ? "z-0 flex-col flex items-center fixed inset-0 left-1/4 uppercase gap-8 bg-black/40 backdrop-blur-lg justify-center p-8 lg:hidden"
           : "hidden"
       }
     >
@@ -57,12 +56,9 @@ const MobileMenu = ({ showMenu, hideMenu, active }) => {
         </Link>
       </li>
       <div>
-        <button
-          onClick={() => signOut()}
-          className="px-8 py-2 font-bold bg-white/20"
-        >
-          Salir
-        </button>
+        <SignOutButton className="px-8 py-2 font-bold bg-white/20">
+          👋 Salir
+        </SignOutButton>
       </div>
     </ul>
   );

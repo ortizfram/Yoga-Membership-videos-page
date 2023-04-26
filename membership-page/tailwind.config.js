@@ -44,6 +44,7 @@ module.exports = {
         "login-image": 'url("/login-2.jpg")',
         "blog-image": 'url("/blog-image.jpg")',
         "taller-image": 'url("/taller-nube.jpg")',
+        "login-image": 'url("/login-bg.png")',
       },
     },
   },
