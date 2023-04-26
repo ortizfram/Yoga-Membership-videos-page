@@ -17,7 +17,12 @@ const Hero = () => {
       className="mx-auto grid grid-cols-1 2xl:grid-cols-2  bg-hero-image w-full h-screen bg-cover bg-center "
     >
       <div className="grid md:flex items-center justify-center">
-        <Image src="/white-logo-buonavibra.png" width={600} height={600} />
+        <Image
+          src="/white-logo-buonavibra.png"
+          width={600}
+          height={600}
+          alt=""
+        />
       </div>
 
       <Slider className="grid" />
